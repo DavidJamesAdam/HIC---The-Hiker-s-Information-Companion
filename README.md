@@ -1,1 +1,1 @@
-# HIC---The-Hiker-s-Information-Companion.
+# HIC - The Hiker's Information Companion.
