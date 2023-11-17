@@ -38,6 +38,8 @@ Breadboard layout
 
 ![HIC_bb](https://github.com/DavidJamesAdam/HIC---The-Hiker-s-Information-Companion./assets/51091241/eb92e0d7-4d9b-46f9-884f-eb0cf3b26d7e)
 
+I'll probably periodically update this readme over the next couple weeks with more details and extra tidbits as I think of them. The next thing I would like to do is see if I can have the graphs scale with the values being read so it's easier to read the data, but that'll be a future endevor if I ever get to it.
+
 Resources used
 
 BME280
