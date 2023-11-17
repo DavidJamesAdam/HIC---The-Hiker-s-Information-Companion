@@ -163,7 +163,7 @@ presTitle = label.Label(terminalio.FONT,
 presGraph.append(presTitle)
 
 # Horizontal lines and y axis labels
-for x in range(123, 8, -int(110/10)):
+for x in range(123, 8, -int(90/10)):
     maxPres_area = label.Label(terminalio.FONT,
                           text = str(pres),
                           color = 0xffffff,
@@ -183,7 +183,7 @@ presSparkline = Sparkline(width = chart_width,
                        height = chart_height,
                        max_items = 120,
                        y_min = 870,
-                       y_max = 970,
+                       y_max = 930,
                        x = 19,
                        y = 10,
                        color = 0x00def0)
@@ -193,7 +193,7 @@ presGraph.append(presSparkline)
 # | Altitude graph |
 
 # Minimum altitude
-alt = 0
+alt = 800
 
 # Title
 altTitle = label.Label(terminalio.FONT,
@@ -224,8 +224,8 @@ for x in range(18, 128, int(120/10)):
 altSparkline = Sparkline(width = chart_width,
                        height = chart_height,
                        max_items = 120,
-                       y_min = 0,
-                       y_max = 2000,
+                       y_min = alt,
+                       y_max = 1500,
                        x = 19,
                        y = 10,
                        color = 0x00fff7)
