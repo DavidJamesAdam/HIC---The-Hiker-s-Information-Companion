@@ -110,7 +110,7 @@ tempGraph.append(tempSparkline)
 # | Humidity graph |
 
 # Minumum humidity
-hum = 40
+hum = 25
 
 # Title
 humTitle = label.Label(terminalio.FONT,
@@ -141,8 +141,8 @@ for x in range(15, 125, int(120/10)):
 humSparkline = Sparkline(width = chart_width,
                        height = chart_height,
                        max_items = 120,
-                       y_min = 40,
-                       y_max = 90,
+                       y_min = 25,
+                       y_max = 75,
                        x = 16,
                        y = 10,
                        color = 0xffff00)
@@ -163,7 +163,7 @@ presTitle = label.Label(terminalio.FONT,
 presGraph.append(presTitle)
 
 # Horizontal lines and y axis labels
-for x in range(123, 8, -int(90/10)):
+for x in range(123, 8, -int(160/10)):
     maxPres_area = label.Label(terminalio.FONT,
                           text = str(pres),
                           color = 0xffffff,
@@ -176,7 +176,7 @@ for x in range(123, 8, -int(90/10)):
     
 # Vertical lines to complete the graph
 for x in range(18, 128, int(120/10)):
-    presGraph.append(Line(x, 14, x, 123, 0xca0000))
+    presGraph.append(Line(x, 11, x, 123, 0xca0000))
 
 # Dynamic graph line that displays data
 presSparkline = Sparkline(width = chart_width,
@@ -193,11 +193,11 @@ presGraph.append(presSparkline)
 # | Altitude graph |
 
 # Minimum altitude
-alt = 800
+alt = 5
 
 # Title
 altTitle = label.Label(terminalio.FONT,
-                          text = "Altitude (k-meters)",
+                          text = "Altitude (mtr x100)",
                           color = 0xffffff,
                           anchor_point = (1, 0.5),
                           anchored_position = (128, 5)
@@ -205,7 +205,7 @@ altTitle = label.Label(terminalio.FONT,
 altGraph.append(altTitle)
 
 # Horizontal lines and y axis labels
-for x in range(123, 8, -int(110/10)):
+for x in range(123, 8, -int(150/10)):
     maxAlt_area = label.Label(terminalio.FONT,
                           text = str(alt),
                           color = 0xffffff,
@@ -213,12 +213,12 @@ for x in range(123, 8, -int(110/10)):
                           anchored_position = (0, x)
                           )
     altGraph.append(maxAlt_area)
-    altGraph.append(Line(18, x, 126, x, 0xc35600))
-    alt += 2
+    altGraph.append(Line(18, x, 126, x, 0x006622))
+    alt += 1
     
 # Vertical lines to complete the graph
 for x in range(18, 128, int(120/10)):
-    altGraph.append(Line(x, 14, x, 123, 0xc35600))
+    altGraph.append(Line(x, 18, x, 123, 0x006622))
 
 # Dynamic graph line that displays data
 altSparkline = Sparkline(width = chart_width,
@@ -228,7 +228,7 @@ altSparkline = Sparkline(width = chart_width,
                        y_max = 1500,
                        x = 19,
                        y = 10,
-                       color = 0x00fff7)
+                       color = 0xff0000)
 altGraph.append(altSparkline)
 
 # Set visibility of target object inside of layer
